@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caique Moura - Calculadora</title>
+    <link rel="icon" type="icon" href="imgs/navi.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <div class="logo-dot"></div>
+            <a href="index.html">kiq</a>
+        </div>
+        <nav>
+            <a href="index.html#sobre">[sobre]</a>
+            <a href="index.html#projetos">[projetos]</a>
+        </nav>
+    </header>
+
+    <main class="calc-page">
+        <section class="calculadora">
+            <h2>[ calculadora ]</h2>
+
+           
+            <input type="text" id="visor" readonly size="15">
+            <br><br>
+
+            <table border="1" cellpadding="5">
+                <tr>
+                   
+                    <td colspan="3"><button onclick="limparVisor()" style="width:100%">C</button></td>
+                    <td><button onclick="adicionarValor('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="adicionarValor('7')">7</button></td>
+                    <td><button onclick="adicionarValor('8')">8</button></td>
+                    <td><button onclick="adicionarValor('9')">9</button></td>
+                    <td><button onclick="adicionarValor('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="adicionarValor('4')">4</button></td>
+                    <td><button onclick="adicionarValor('5')">5</button></td>
+                    <td><button onclick="adicionarValor('6')">6</button></td>
+                    <td><button onclick="adicionarValor('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="adicionarValor('1')">1</button></td>
+                    <td><button onclick="adicionarValor('2')">2</button></td>
+                    <td><button onclick="adicionarValor('3')">3</button></td>
+                    <td><button onclick="adicionarValor('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="adicionarValor('0')" style="width:100%">0</button></td>
+                    <td><button onclick="adicionarValor('.')">.</button></td>
+                    <td><button onclick="calcularResultado()">=</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script src="calc.js"></script>
+
+</body>
+</html>

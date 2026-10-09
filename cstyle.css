@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #101011;
+    --text-color: #cfcfcf;
+    --text-muted: #999999;
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    box-shadow: inset 0 0 100px #0b061e83;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: rgb(16, 16, 17);
+    box-shadow: 0 5px 2px #00000017;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+
+.logo-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    text-decoration: none;
+}
+
+.logo a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover{
+    color:#ffffff
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--text-color);
+}
+
+.contato {
+    width: min(480px, 90%);
+    margin: auto;
+    padding: 3rem 0;
+}
+
+.contato h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contato input,
+.contato textarea,
+.contato button {
+    padding: 0.8rem;
+    border: 1px solid #ffffff26;
+    border-radius: 1px;
+    font: inherit;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    background: #ffffff05;
+    color: var(--text-color);
+}
+
+
+
+.contato button {
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.contato button:hover {
+    background: #ffffff0d;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+} 
